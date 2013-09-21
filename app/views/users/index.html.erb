@@ -1,0 +1,10 @@
+<ul>
+  <% @users.each do |user| %>
+    <%= render 'user', user: user %>
+  <% end %>
+
+  <%# Outro modo: %>
+  <%#= render partial: 'user', collection: @users %>
+</ul>
+
+<%= link_to "Criar usuário", new_user_path %>

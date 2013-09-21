@@ -1,0 +1,12 @@
+<h1>Crie seu usuário</h1>
+<%= form_for @user do |f| %>
+  <%= f.label :name, class: "my-class" %>
+  <%= f.text_field :name %>
+  <%= @user.errors.full_messages_for(:name).
+    join(", ") %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= @user.errors.full_messages_for(:email).
+    join(", ") %>
+  <%= f.submit "Enviar" %>
+<% end %>

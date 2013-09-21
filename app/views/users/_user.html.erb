@@ -1,0 +1,5 @@
+<li>
+  <%= link_to user.name, user_path(user) %>
+  <%= link_to "Enviar email",
+    "mailto:#{user.email}" %>
+</li>
